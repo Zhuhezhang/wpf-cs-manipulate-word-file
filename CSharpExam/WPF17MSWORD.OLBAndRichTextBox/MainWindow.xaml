@@ -1,0 +1,48 @@
+﻿<Window x:Class="WPF17MSWORD.OLBAndRichTextBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF17MSWORD.OLBAndRichTextBox"
+        mc:Ignorable="d"
+        Title="演示操作WORD文件" Height="500" Width="900" PreviewKeyDown="Window_KeyDown">
+    <Window.Background>
+        <ImageBrush ImageSource="/WPF17MSWORD.OLBAndRichTextBox;component/backgroundImage.jpg"/>
+    </Window.Background>
+    <Grid Margin="10,0,10,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="25"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="80"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="80"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Name="ShowFileNameLable" Content="正在编辑文件：" Foreground="White" Grid.Column="0" Grid.Row="0" Height="25" Width="Auto"/>
+        <RichTextBox Name="richTextBox1" Grid.Column="0" Grid.ColumnSpan="17" Grid.Row="3" BorderBrush="#00000000" Background="#00000000" Foreground="White" PreviewMouseDown="PromptInputInfoOfRichTextBox" TextBlock.LineHeight="1"/>
+        <Button Name="UndoButton" Content="撤消(U)" Grid.Row="0" Grid.Column="2" Height="25" Click="UndoButton_Click" Margin="0,8,0,7" Background="#00000000" BorderBrush="Transparent" Foreground="#FFFDFDFD" MouseEnter="UndoButton_MouseEnter" MouseLeave="UndoButton_MouseLeave"/>
+        <Button Name="RedoButton" Content="恢复(R)" Grid.Row="0" Grid.Column="4" Height="25" Click="RedoButton_Click" Margin="0,8,0,7" Background="Transparent" BorderBrush="Transparent" Foreground="#FFFDFDFD" MouseEnter="RedoButton_MouseEnter" MouseLeave="RedoButton_MouseLeave"/>
+        <Button Name="ClearAllButton" Content="清空(C)" Grid.Row="0" Grid.Column="6" Height="25" Click="ClearAllButton_Click" Margin="0,8,0,7" Background="Transparent" BorderBrush="Transparent" Foreground="#FFFDFDFD" MouseEnter="ClearAllButton_MouseEnter" MouseLeave="ClearAllButton_MouseLeave"/>
+        <Button Name="AddPhotoButton" Content="添加图片(A)" Grid.Row="0" Grid.Column="8" Height="25" Click="AddPhotoButton_Click" Margin="0,8,0,7" Background="Transparent" BorderBrush="Transparent" Foreground="#FFFDFDFD" MouseEnter="AddPhotoButton_MouseEnter" MouseLeave="AddPhotoButton_MouseLeave"/>
+        <Button Name="DeleteButton" Content="删除(D)" Grid.Row="0" Grid.Column="16" Height="25" Click="DeleteButton_Click" Margin="0,8,0,7" Background="Transparent" BorderBrush="Transparent" Foreground="#FFFDFDFD" MouseEnter="DeleteButton_MouseEnter" MouseLeave="DeleteButton_MouseLeave"/>
+        <Button Name="CloseButton" Content="关闭(G)" Grid.Row="0" Grid.Column="12" Height="25" Click="CloseButton_Click" Margin="0,8,0,7" Background="Transparent" BorderBrush="Transparent" Foreground="#FFFDFDFD" MouseEnter="CloseButton_MouseEnter" MouseLeave="CloseButton_MouseLeave"/>
+        <Button Name="OpenButton" Content="打开(O)" Grid.Row="0" Grid.Column="14" Height="25" Click="OpenButton_Click" Margin="0,8,0,7" Background="#00000000" BorderBrush="#00000000" Foreground="White" MouseEnter="OpenButton_MouseEnter" MouseLeave="OpenButton_MouseLeave"/>
+        <Button Name="SaveButton" Content="保存(S)" Grid.Row="0" Grid.Column="10" Height="25" Click="SaveButton_Click" Margin="0,8,0,7" Background="Transparent" BorderBrush="Transparent" Foreground="#FFFDFDFD" MouseEnter="SaveButton_MouseEnter" MouseLeave="SaveButton_MouseLeave"/>
+    </Grid>
+</Window>
